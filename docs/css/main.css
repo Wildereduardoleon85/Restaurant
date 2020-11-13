@@ -270,8 +270,7 @@ footer {
 /*------------Media QUeries--------------*/
 @media screen and (max-width: 862px) {
   footer .inf {
-    width: 90%;
-    background-color: darkmagenta; } }
+    width: 90%; } }
 
 * {
   box-sizing: border-box;
