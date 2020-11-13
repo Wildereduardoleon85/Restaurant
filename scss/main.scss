@@ -1,0 +1,182 @@
+@import 'conf';
+@import 'menu-comida';
+@import 'galeria';
+@import 'footer';
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family: 'Xanh Mono', monospace;
+    color: $blanco;
+}
+
+/*-----------------------Header------------------------*/
+
+header{
+    .hamburguer{
+        background: url('../img/fondo.jpg');
+        background-size: cover;
+        height:772px;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center top;
+
+        .menu-resp2{
+            display:none;
+        }
+        
+        .menu{
+            background-color: rgba($negro, 0.85);
+            text-align: center;
+            padding:15px;
+            position: fixed;
+            width:100%;
+            z-index: 3;
+
+            a{
+                margin-left: 10px;
+                text-decoration: none;
+                font-size: 20px;
+                color: $gris-claro;
+
+                &:hover{
+                    color: $blanco;
+                    @include trans;
+                    cursor: pointer;
+                }
+            } 
+
+            .btn{
+                background-color: $naranja-oscuro;
+                color: $blanco;
+                padding: 8px 20px;
+                border-radius: 15px;
+                border: none;
+                position: absolute;
+                right: 1%;
+                top: 20%;
+                cursor: pointer;
+
+                &:hover{
+                    background: $naranja-oscuro2;
+                    @include trans;
+                }
+            }
+
+            .menu-resp{
+                display:none;
+            }
+        }
+
+        .titular{
+            position: absolute;
+            top:290px;
+            text-align: center;
+            width:100%;
+
+            h1{
+                font-size: 50px;
+            }
+
+            .historia{
+                width: 600px;
+                margin-right: auto;
+                margin-left: auto;
+                margin-top: 40px;
+                line-height: 40px;
+            }
+        }
+    }
+}
+
+
+/*-------------Media QUeries---------------*/
+
+@media screen and (max-width: 610px){
+
+   header{
+
+       .hamburguer{
+
+           .menu{
+               text-align: right;
+
+               a{
+                   display:none;
+               }
+
+               .btn{
+                    left:1%;
+               }
+
+               .menu-resp{
+                   font-size: 22px;
+                   color: $gris-claro;
+                   display: block;
+
+                   &:hover{
+                       cursor: pointer;
+                       color: $blanco;
+                   }
+               }
+           }
+
+           .menu-resp2{
+            position: absolute;
+            top: 50px;
+            display: flex;
+            flex-direction: column;
+            background-color: rgba($negro, 0.85);
+            right: 0;
+            width: 100%;
+            line-height: 40px;
+            text-align: right;
+            transform: translateY(-200px);
+            position: fixed;
+            z-index: 3;
+            @include trans;
+ 
+            a{
+                margin-right: 20px;
+                cursor: pointer;
+                color: $gris-claro;
+ 
+                &:hover{
+                    color: $blanco;
+                    @include trans;
+                }
+            }
+
+        }
+ 
+        .desplegar-menu{
+            transform: translateY(0px);
+        }
+
+        .titular{
+
+            .historia{
+
+                width:90%;
+
+                h2{
+                    font-size: 20px;
+                }
+            }
+
+            h1{
+                
+                font-size: 40px;
+            }
+        }
+    }
+
+       
+   }
+
+ }
+

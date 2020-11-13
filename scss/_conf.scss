@@ -1,0 +1,11 @@
+$naranja-oscuro: #bc2c1a;
+$negro: #272932;
+$naranja-claro: #F5F1E3;
+$gris: #798478;
+$gris-claro: #a1b39f;
+$blanco: #eaffe8;
+$naranja-oscuro2: #8f2113;
+
+@mixin trans{
+    transition: all 0.5s ease-out;
+}
